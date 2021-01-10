@@ -53,7 +53,7 @@
                 @endif
 
 
-                <li class="nav-item"><a class="nav-link" href="#">Cart({{$total}})</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{url('/cart_list')}}">Cart({{$total}})</a></li>
               </ul>
           </div>
         </div>

@@ -49,6 +49,10 @@
        .product_list{
            margin-top: 100px;
        }
+       .cart-img{
+           width:200px;
+           height: auto;
+       }
       </style>
     {{-- <script>
         $(document).ready(function(){
