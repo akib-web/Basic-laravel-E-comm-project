@@ -33,6 +33,22 @@
            justify-content: center;
            background-color: rgb(195, 192, 192);
        }
+       .slider-img{
+        width: auto;
+        height: 82vh !important;
+        margin-left: auto;
+        margin-right: auto;
+       }
+       .carousel-caption{
+           background-color: rgba(107, 105, 105,0.5);
+       }
+       .product_list_img{
+           width: auto;
+           height: 100px;
+       }
+       .product_list{
+           margin-top: 100px;
+       }
       </style>
     {{-- <script>
         $(document).ready(function(){
