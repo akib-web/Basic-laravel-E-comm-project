@@ -45,7 +45,7 @@ class ProductController extends Controller
         $userId = Session::get('user')['id'];
         return Cart::where('user_id',$userId)->count();
     }
-
+// --
     function cartList(){
         if(session()->has('user'))
         {
@@ -53,7 +53,7 @@ class ProductController extends Controller
             $products = DB::table('cart')
                 ->join('products','cart.product_id','=','products.id')
                 ->where('cart.user_id',$userId)
-                ->select('products.*')
+                ->select('products.*','cart.id as cart_id')
                 ->get();
             return view('cart',['products'=>$products]);
         }
@@ -62,5 +62,11 @@ class ProductController extends Controller
             return redirect('/login');
         }
 
+    }
+    // ---------
+    function removeCart($id)
+    {
+        cart::destroy($id);
+        return redirect('/cart_list');
     }
 }
