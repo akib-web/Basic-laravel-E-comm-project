@@ -22,11 +22,15 @@ Route::get('/', function () {
 Route::get('/login', function () {
     return view('login');
 });
+Route::get('/signup', function () {
+    return view('signup');
+});
 Route::get('/logout', function () {
     Session::forget('user');
     return redirect('/login');
 });
 Route::post('/login',[UserController::class,'userLogin']);
+Route::post('/signup',[UserController::class,'signUp']);
 Route::get('/',[ProductController::class,'index']);
 Route::get('/details/{id}',[ProductController::class,'details']);
 Route::get('/search',[ProductController::class,'search']);

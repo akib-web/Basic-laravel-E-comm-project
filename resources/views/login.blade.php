@@ -19,7 +19,7 @@
                     <button class="w-100 btn btn-lg btn-primary" type="submit">Login</button>
                     <p class="mt-5 mb-3 text-muted">&copy; 2017-2020</p>
                   </form>
-                  <p class="small text-center text-gray-soft">Don't have an account yet? <a href="/Sign up">Sign up</a></p>
+                  <p class="small text-center text-gray-soft">Don't have an account yet? <a href="/signup">Sign up</a></p>
             </div>
         </div>
     </div>
