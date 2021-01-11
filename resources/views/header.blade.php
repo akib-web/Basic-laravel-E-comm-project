@@ -19,7 +19,7 @@
                 <a class="nav-link active" aria-current="page" href="{{url('/')}}">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" href="{{url('/myorders')}}">Orders</a>
               </li>
             </ul>
             <ul class="navbar-nav  mb-2 mb-lg-0">
@@ -30,6 +30,8 @@
                         <button class="btn btn-outline-success" type="submit">Search</button>
                     </form>
                   </li>
+                  <li class="nav-item"><a class="nav-link" href="{{url('/cart_list')}}">Cart({{$total}})</a></li>
+
                 @if (Session::has('user'))
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -47,14 +49,11 @@
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="{{url('/login')}}">Login</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">Sign up</a></li>
+                            <li><a class="dropdown-item" href="{{('/signup')}}">Sign up</a></li>
                         </ul>
                     </li>
                 @endif
-
-
-                <li class="nav-item"><a class="nav-link" href="{{url('/cart_list')}}">Cart({{$total}})</a></li>
-              </ul>
+                </ul>
           </div>
         </div>
       </nav>
