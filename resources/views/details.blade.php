@@ -22,10 +22,7 @@
                         <input type="hidden" name="product_id" value="{{$product['id']}}">
                         <button  class="btn btn-primary">Add to cart</button>
                     </form><br>
-                    <form action="">
-
-                        <button class="btn btn-success">But now</button>
-                    </form>
+                    <a class="btn btn-success" href="{{url('/ordernow')}}">Buy now</a>
                 </div>
             </div>
         </div>
